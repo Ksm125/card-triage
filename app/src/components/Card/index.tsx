@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 import { useOnClickOutside } from "usehooks-ts";
 
 export const CardPreview = ({ data, onStatusChange }: CardPreviewProps) => {
-  const { patientName, createdDate } = data;
+  const { patientName, createdDate, status } = data;
   const [isMenuOpen, setIsOpenMenu] = useState(false);
   const menuRef = useRef(null);
 
@@ -27,6 +27,7 @@ export const CardPreview = ({ data, onStatusChange }: CardPreviewProps) => {
       </button>
       <p>Name: {patientName}</p>
       <p>Creation date: {createdDate}</p>
+      <p>Status: {status}</p>
       <CardMenu ref={menuRef} isOpen={isMenuOpen} data={data} handleChangeStatus={handleChangeStatus} />
     </div>
   );
