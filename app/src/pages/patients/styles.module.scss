@@ -1,0 +1,24 @@
+.patients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  &__search {
+    align-self: flex-end;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    column-gap: 10px
+  }
+}
